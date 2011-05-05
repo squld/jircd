@@ -37,6 +37,19 @@
 		</dependency>
 	</dependencies>
 
+	<developers>
+		<developer>
+			<name>squld</name>
+			<url>http://kurusugawa.jp/author/squld/</url>
+			<email>squld@kurusugawa.jp</email>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>git://github.com/jircd.git</connection>
+		<developerConnection>git@github.com:squld/jircd.git</developerConnection>
+	</scm>
+
 	<build>
 		<plugins>
 			<plugin>
