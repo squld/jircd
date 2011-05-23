@@ -1,0 +1,15 @@
+<webapp>
+<display-name>ChanServ</display-name>
+
+<servlet>
+<servlet-name>ChanServ</servlet-name>
+<display-name>ChanServ</display-name>
+<description>ChanServ IRC servlet</description>
+<servlet-class>jircd.servlet.irc.chanserv.ChanServ</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>ChanServ</servlet-name>
+<url-pattern>/ChanServ,isnick</url-pattern>
+</servlet-mapping>
+</webapp>
