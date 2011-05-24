@@ -45,7 +45,7 @@ jircd can be consumed in a Maven build. Multiple artifacts are available, depend
 
 
 About
-===
+=====
 
 original project link http://j-ircd.sourceforge.net/
 
