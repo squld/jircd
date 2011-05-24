@@ -39,5 +39,6 @@ jircd can be consumed in a Maven build. Multiple artifacts are available, depend
 			<artifactId>jircd-server</artifactId>
 			<version>0.7.0-BETA</version>
 		</dependency>
+	</dependencies>
 
 .. _jircd-server-0.7.0-BETA.jar: https://github.com/squld/jircd/raw/master/repository/jircd/jircd-server/0.7.0-BETA/jircd-server-0.7.0-BETA.jar
