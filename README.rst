@@ -1,9 +1,11 @@
 Direct Download 0.7.0-BETA
 =================
+
 - jircd-server-0.7.0-BETA.jar_ (core api)
 
 Maven Repository
 ===========
+
 jircd can be consumed in a Maven build. Multiple artifacts are available, depending on the application's requirements::
 
 	<repositories>
@@ -44,6 +46,7 @@ jircd can be consumed in a Maven build. Multiple artifacts are available, depend
 
 About
 ===
+
 original project link http://j-ircd.sourceforge.net/
 
 License (GPL)
