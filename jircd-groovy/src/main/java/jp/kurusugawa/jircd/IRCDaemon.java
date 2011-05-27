@@ -315,6 +315,7 @@ public class IRCDaemon implements jIRCdMBean {
 
 		INSTANCE.mThisServer.getEntityContext().fireLoadPlugins();
 
+		// TODO move to server/Behavior.groovy
 		// @formatter:off
 		java.util.List<Class<?>> aClasses = Arrays.asList(
 				Admin.class,
