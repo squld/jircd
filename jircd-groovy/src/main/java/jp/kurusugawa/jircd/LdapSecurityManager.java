@@ -98,7 +98,7 @@ public class LdapSecurityManager implements SecurityManager {
 					tSearchControls.setReturningAttributes(new String[] { "cn", });
 					tSearchControls.setSearchScope(SearchControls.ONELEVEL_SCOPE);
 
-					// "{USERNAME}"をユーザIDに変換してクエリを実行する
+					// replace "{USERNAME}"
 					String tGroupFilter = ((String) tAppConfigurationEntry.getOptions().get("groupFilter")).replace("{USERNAME}", "{0}");
 
 					if (tIsInfoEnabled) {
