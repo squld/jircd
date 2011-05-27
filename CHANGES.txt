@@ -1,0 +1,116 @@
+===   FILE NOTES  ===
+
+This file contains a list of changes between versions.
+All version headers include #.#.# (type) - release date - author
+Individual changes are bulleted in the format of:
+ - level 1 bullet
+    * level 2 bullet
+       + level 2 bullet
+If a change is made by someone other than the main author of the version, this
+should be noted at the end of the change. For example:
+ - Added SOMECOMMAND support - bob
+Please list the most recent changes at the top.
+
+=== BEGIN CHANGES ===
+
+0.7.0 (beta) - April 8, 2006 - markhale
+ - Switched to concurrent collections (Java 1.4 now required)
+ - JAAS integration
+ - config file now loadable from any URL
+ - NIO-based SelectorListener (old listener renamed to SocketListener)
+ - Support for STATS m
+ - JMX support for Listeners
+ - Refactored message handling
+
+0.6.4 (beta) - April 3, 2006 - markhale
+ - Localization (user localization using geo-IP)
+ - Support for arbitrary user/channel modes
+ - Lots of minor improvements
+
+0.6.3 (beta) - September 9, 2005 - markhale
+ - Added database persistence to chanserv
+
+0.6.2 (beta) - April 30, 2005 - markhale
+ - Refactored I/O classes
+ - Fixed bugs:
+    * Concurrent modification exception on ping timeout
+    * IRCX support
+
+0.6.1 (beta) - December 2, 2004 - markhale
+ - Refactored CommandManager (merged into jIRCd)
+ - Changed format of jircd.bind lines in config file
+ - Changed format of jircd.oper lines in config file
+ - Added security checks
+    * invokeCommand() checks against CommandPermission
+    * Default PrivMsg command class checks CTCP messages against CTCPPermission
+
+0.6.0 (beta) - November 24, 2004 - markhale
+ - Added IRC servlet framework
+ - jircd.hostName config property changed to jircd.serverName
+ - Improved JMX agent
+ - Fixed bugs:
+    * KILL command bug - markhale
+
+0.5.0 (beta) - October 9, 2004 - markhale
+ - Added RPL_TOPICWHOTIME support
+ - Added DIE, RESTART commands
+ - Implement more server-server connection support (including P10 protocol)
+ - Added JMX agent support
+ - Refactored remaining public statics into instance variables (added new Network class)
+ - Fixed bugs:
+    * Accidental switch case fallthru in User.java - thaveman
+    * Multiple channels in JOIN - markhale
+
+0.4.1 (beta) - May 14, 2004 - markhale
+ - Fixes to server-server connections (still incomplete).
+ - Implemented SHA encryption for operator passwords.
+
+0.4.0 (beta) - May 9, 2004 - markhale
+ - Implemented plugin auto-loader.
+ - New version released.
+
+0.3.2 (alpha) - April 14, 2004 - markhale
+ - Added SSL support!
+
+0.3.1 (alpha) - March 31, 2004 - markhale
+ - New Message class added to handle IRC message creation and parsing.
+ - Bug fixes:
+    * fixed synchronization problem on quit.
+    * better NAMES support.
+    * fixed ping timer bug.
+
+0.3.0 (alpha) - March 19, 2004 - markhale
+ - New IRC command plugin classes.
+ - Conf file changed to a standard Java properties file.
+ - Almost all IRC commands implemented in some fashion.
+ - Some work on establishing server-server connections.
+
+0.2.0 (alpha) - March 5, 2004 - markhale
+ - Reorganised classes:
+    * Moved classes into packages.
+    * Turned some classes into inner classes.
+    * Most arrays now replaced by collections.
+    * Reduced use of public statics in jIRCd.class.
+    * Ping timer thread converted into a java.util.TimerTask.
+    * Thread classes changed from "extends Thread" to "implements Runnable".
+ - More IRC commands added:
+    * KICK, STATS, INVITE, NAMES, AWAY, INFO, TIME, MOTD.
+ - Switched to log4j for logging.
+ - Added reason support to PART - thaveman
+ - Implemented multiple targets (comma-seperated) for JOIN, PART, PRIVMSG,
+   NOTICE, WHOIS - thaveman
+ - Bug fixes:
+    * moderated channels work.
+
+0.1.1 (alpha) - Nov 15, 2003 - thaveman
+ - Initial release. Here's a list of some of the included features:
+    * Allows IRC clients to connect and register.
+    * Supports the generation and maintenence of channels, including, but not
+      limited to: JOIN, PART, QUIT, TOPIC, MODE, PRIVMSG, NOTICE. Some channel
+      modes don't have any effect at this point.
+    * Supports private messaging via PRIVMSG and NOTICE.
+    * Includes the ISON command, which mIRC and other clients use for "notify"
+      lists.
+    * Allows the use of USERHOST.
+    * Minor support for WHOIS, WHO, and LIST.
+    * Probably other things I can't remember at the moment.

@@ -1,0 +1,37 @@
+Welcome to the first ever test server for jIRCd!
+                                                            
+             +6]'           :6;                             
+          ';             .6'   *! .65                       
+         2              5         ,  '6                     
+        6             5'       .6;     ]                    
+        6             6        6                            
+         6            ]:      2:                            
+          6            6   5;        '6661]6:               
+            6           +2         6 6'      6              
+              **       .' '5     6  6         ]             
+                '5     +    +:  .. .]         6             
+                  .6   6      2 ]   *!,                     
+     565< <656  <56565656565   666565656565           6565  
+     <<<: <565  <656<<A16Q565; :65655  15656          5655  
+     656< <565  <656  J. J5655 6566     +65J   55656565655  
+     656< <565  <656565656565  5655           65655. 65655  
+     656< <565  <656555656]    5656      6    5655    6565  
+     565< <656*56565  .;6565   +65655   5656P*56562   5655  
+     656< <565..]656     5656   '5656565656P]!:56566565655  
+     656< <565; <656   ...2565.   <6565655      P565655655  
+  '65656. 6                ;52    .52   :5      .* ;<       
+  656565     '555'                 :16.        *: 2         
+             +]    .*55555]]25]*]'*25'     *5; <2           
+             .+6]]!...**:..         :*      '2              
+          :55    2*             .    J55  5'                
+        ;2]        ....      5*+56*                         
+        25'5'                                               
+             *55656]:.     ;5+]**555+]*];                   
+
+Welcome to jIRCd: The world's first full-featured multiplatform Java-powered IRC
+server. Created and maintained by Tyrel L. Haveman and Mark Hale.
+jIRCd uses a TCP protocol based on the Internet Relay Chat Protocol (RFC 1459),
+by Jarkko Oikarinen (May 1993). Portions may also be based on the IRC version 2
+protocol (RFC 2810, RFC 2811, RFC 2812, RFC 2813) by C. Kalt (April 2000).
+
+jIRCd is copyright (c) 2003 Tyrel L. Haveman.

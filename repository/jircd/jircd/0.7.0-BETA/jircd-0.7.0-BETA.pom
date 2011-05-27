@@ -34,5 +34,6 @@
 	<modules>
 		<module>jircd-server</module>
 		<module>jircd-servlet</module>
+		<module>jircd-groovy</module>
 	</modules>
 </project>

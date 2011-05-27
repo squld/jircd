@@ -1,0 +1,94 @@
+INSTALLATION
+============
+
+
+Build
+-----
+
+You will need:
+ - Ant (http://ant.apache.org/)
+
+1) Run Ant.
+
+
+Run
+---
+
+1) Edit and modify the properties file jircd.properties as appropriate.
+2) Edit and modify the script jircd.cmd as appropriate.
+3) Execute the jircd script.
+Alternative: run as a JMX agent
+3) Execute the agent script.
+
+
+Command plugins
+---------------
+
+All IRC commands are implemented as plugins.
+jIRCd provides the following plugins:
+ * irc.jar - standard RFC commands
+ * irc_p10.jar - Undernet P10 server-server protocol commands
+ * ircx.jar - Microsoft's IRCX commands
+ * misc.jar - miscellaneous commands (LOCALE)
+ * bnc.jar - Bouncer
+
+You can also write your own plugins to customize the existing IRC commands to your requirements,
+or even create new custom IRC commands.
+See the Javadocs for the jircd.irc.Command interface.
+
+
+IRC servlets
+------------
+
+IRC servlets provide an implementation of the Servlet API for the IRC protocol.
+Their design is (not surprisingly) similar to HTTP servlets (which we all know and love).
+They provide a framework for implementing IRC services such as nickserv and chanserv.
+
+
+Security
+--------
+
+When running under a security manager, jIRCd supports permissions per IRC command,
+and the default plugins support permissions per CTCP message types.
+To allow all IRC commands you need to grant the permission:
+   permission jircd.irc.CommandPermission "*";
+To allow all CTCP message types you need to grant the permission:
+   permission jircd.irc.CTCPPermission "*", "*";
+The current security policy can be reloaded using the REHASH command.
+
+Examples:
+   permission jircd.irc.CommandPermission "PRIVMSG";
+      allow the PRIVMSG IRC command
+   permission jircd.irc.CTCPPermission "TIME";
+      allow the CTCP TIME message
+   permission jircd.irc.CTCPPermission "DCC", "*";
+      allow all DCC messages
+   permission jircd.irc.CTCPPermission "DCC", "CHAT";
+      allow the DCC CHAT message
+
+
+Notes
+-----
+
+The motd.txt and INFO.txt files are used by the MOTD and INFO IRC commands, respectively.
+
+IRC operators have the rights to change user and channel modes.
+
+
+TO DO
+-----
+
+PropertiesLoginModule and ConnectionCallback support for IP/host matching and sha/md5.
+Server-to-server connections work but are not fully implemented
+(basic messaging works).
+Disconnection code for servers.
+SelectorListener abit buggy.
+???Refactor Command interface invoke(Connection, Message)???
+
+Some commands that still need to be added:
+TRACE
+WHOWAS
+
+
+-Tyrel Haveman
+-Mark Hale

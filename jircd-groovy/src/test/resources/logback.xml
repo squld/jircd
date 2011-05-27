@@ -1,0 +1,21 @@
+<configuration>
+	<appender name="root.log" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>root.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>root.log-%d{yyyyMMdd}</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level \(%file:%line\) - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="jp.kurusugawa">
+		<level value="INFO" />
+	</logger>
+
+	<root>
+		<level value="WARN" />
+		<appender-ref ref="root.log" />
+	</root>
+</configuration>

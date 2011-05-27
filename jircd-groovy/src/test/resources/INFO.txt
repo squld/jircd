@@ -1,0 +1,17 @@
+jIRCd is a full-featured Java-powered IRC server.
+It uses the advanced features of Java technology,
+including multi-threading and multiple platforms,
+to create a very powerful IRC server for any platform.
+
+Features:
+ - SSL support
+ - Pluggable IRC commands
+ - Security support
+ - IRC servlets
+ - JMX support
+
+
+Developed by Tyrel L. Haveman and Mark Hale.
+
+You can find more information on this project at:
+   http://sourceforge.net/projects/j-ircd/
