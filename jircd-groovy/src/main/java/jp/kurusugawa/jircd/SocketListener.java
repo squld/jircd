@@ -78,7 +78,7 @@ public class SocketListener extends Listener {
 	/** Waits for a connection */
 	protected void waitForActivity() throws IOException {
 		Socket tSocket = mServerSocket.accept();
-		MyStreamConnection tConnection = new MyStreamConnection(tSocket, this, mStreamThreadPool);
+		MyStreamConnection tConnection = new MyStreamConnection(tSocket, this, mStreamThreadPool, jircd.getProperty("jircd.charset", "UTF-8"));
 		Connection.Handler tHandler = new Connection.Handler(jircd, tConnection);
 		tConnection.setHandler(tHandler);
 		tConnection.start();

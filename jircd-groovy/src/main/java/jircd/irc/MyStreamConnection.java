@@ -56,12 +56,12 @@ public class MyStreamConnection extends Connection implements Runnable {
 
 	private int linesSent;
 
-	public MyStreamConnection(Socket socket, ConnectionManager manager, ExecutorService pool) throws IOException {
+	public MyStreamConnection(Socket socket, ConnectionManager manager, ExecutorService pool, String aCharset) throws IOException {
 		super(socket, manager);
 		inputStats = new StatisticsInputStream(socket.getInputStream());
 		outputStats = new StatisticsOutputStream(socket.getOutputStream());
-		input = new LineNumberReader(new InputStreamReader(inputStats, Constants.CHARSET), Constants.MAX_MESSAGE_SIZE);
-		output = new BufferedWriter(new OutputStreamWriter(outputStats, Constants.CHARSET), Constants.MAX_MESSAGE_SIZE);
+		input = new LineNumberReader(new InputStreamReader(inputStats, aCharset), Constants.MAX_MESSAGE_SIZE);
+		output = new BufferedWriter(new OutputStreamWriter(outputStats, aCharset), Constants.MAX_MESSAGE_SIZE);
 		threadPool = pool;
 		logger.debug("Initiated connection " + toString());
 		manager.connectionOpened(this);
@@ -102,8 +102,9 @@ public class MyStreamConnection extends Connection implements Runnable {
 				return;
 			} catch (RuntimeException e) {
 				logger.warn("Exception occured in " + toString(), e);
-				handler.getEntity().disconnect(e.getMessage());
-				return;
+				Message tMessage = new Message("NOTICE");
+				tMessage.appendLastParameter(e.toString());
+				handler.getEntity().send(tMessage);
 			}
 		}
 	}
