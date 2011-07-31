@@ -61,7 +61,7 @@ public class LdapSecurityManager implements SecurityManager {
 
 	@Override
 	public String getName() {
-		return getClass().getCanonicalName();
+		return SecurityManager.SERVICE_NAME;
 	}
 
 	@Override
