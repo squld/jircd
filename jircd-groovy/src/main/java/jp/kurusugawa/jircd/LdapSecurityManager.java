@@ -27,7 +27,7 @@ public class LdapSecurityManager implements SecurityManager {
 
 	private final TimerCacheHashMap<String, Collection<String>> mGroupCache;
 
-	private LdapSecurityManager() {
+	public LdapSecurityManager() {
 		mGroupCache = new TimerCacheHashMap<String, Collection<String>>();
 	}
 
